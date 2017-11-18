@@ -1,0 +1,7 @@
+<h1><%= @report.title %></h1>
+
+<p><%= @report.message %></p>
+
+<% if current_pilot %>
+<%= render "form"  %>
+<% end %>
