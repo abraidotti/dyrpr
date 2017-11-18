@@ -1,3 +1,13 @@
 <h1>new report dog</h1>
 
-<%= render "form"  %>
+<% if current_pilot %>
+  <%= form_for @report, url: {action: "create"}, html: {class: "form"} do |f| %>
+  Title:
+  <%= f.text_field :title %>
+  <br>
+  Message:
+  <%= f.text_area :message %>
+  <br>
+  <%= f.submit %>
+  <% end %>
+<% end %>

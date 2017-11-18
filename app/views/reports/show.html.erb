@@ -3,5 +3,14 @@
 <p><%= @report.message %></p>
 
 <% if current_pilot %>
-<%= render "form"  %>
+  <%= form_for @report do |f| %>
+  Title:
+  <%= f.text_field :title %>
+  <br>
+  Message:
+  <%= f.text_area :message %>
+  <br>
+  <%= f.submit %>
+  <% end %>
+  <%= link_to 'Delete', @report, method: 'delete', local: true %>
 <% end %>
