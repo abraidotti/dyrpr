@@ -5,6 +5,7 @@ class CreatePilots < ActiveRecord::Migration[5.1]
       t.string :last_name
       t.string :ship_name
       t.string :employer_name
+      t.string :email
       t.timestamps
     end
   end
