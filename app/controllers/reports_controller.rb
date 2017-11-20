@@ -6,7 +6,7 @@ class ReportsController < ApplicationController
     @report.pilot_id = current_pilot.id
 
     if @report.save
-      flash[:notice] = 'Yay! Saved!'
+      flash[:notice] = 'Report successfully saved.'
       redirect_to reports_path
     else
       flash[:notice] = "Error. Report not saved: #{@report.errors.messages.values}"

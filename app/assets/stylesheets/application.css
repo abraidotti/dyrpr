@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+<link href="https://fonts.googleapis.com/css?family=Lobster|PT+Sans" rel="stylesheet">
+* {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}

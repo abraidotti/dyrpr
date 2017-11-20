@@ -1,3 +1,20 @@
-<h1>FUCK YEAH</h1>
+<h1>Do you remember Planet Radiant?</h1>
 
-<%= link_to 'New Report', new_report_path %>
+<nav>
+  <a href="/">home</a>
+  <!-- first check the user's login status -->
+  <% if pilot_signed_in? do %>
+    <%= link_to "Log out", destroy_pilot_session_path, :method=>'delete'%>
+    <li><%= link_to "Profile", current_user %></li>
+  <% else %>
+      <%= link_to "login", new_pilot_session_path %>
+  <% end %>
+
+    <% if current_pilot != nil %>
+      <a href= "<%=/pilots/current_pilot.id %>">
+        View My Profile
+      </a>
+      <%= link_to 'New Report', new_report_path %>
+    <% end %>
+  <% end %>
+</nav>
